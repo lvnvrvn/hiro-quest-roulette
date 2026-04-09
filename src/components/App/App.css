@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1e2025;
+}
+
+.circle {
+  width: 576px;
+  height: 526px;
+  border-radius: 8px;
+  padding: 24px;
+  border: 2px solid #2e3139;
+  overflow: hidden;
+}
+
+.cards__container {
+  display: flex;
+  column-gap: 4px;
+  will-change: transform;
+  margin-top: 16px;
+}
+
+.spin-btn {
+  width: 100%;
+  margin: 16px 0;
+  border-radius: 40px;
+  padding: 8px 16px;
+  border: none;
+  background: #ff0633;
+  box-shadow:
+    0px 4px 4px 0px #0000004d,
+    0px 8px 12px 6px #00000026;
+  font-family: "Alumni Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 24px;
+  letter-spacing: 1%;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: #fdfdfd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 16px;
+  cursor: pointer;
+}
+
+.spin-btn:hover img {
+  animation: presentMove 0.7s ease-out 0.1s 1 normal none;
+  transition: all 0.2s linear;
+}
+
+@keyframes presentMove {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px) scale(0.8) rotate(-15deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(10px) scale(1) rotate(15deg);
+  }
+  70% {
+    transform: translateX(0) scale(1) rotate(-10deg);
+  }
+  80% {
+    transform: translateX(0) scale(1) rotate(10deg);
+  }
+  90% {
+    transform: translateX(0) scale(1) rotate(-5deg);
+  }
+  100% {
+    transform: translateX(0) scale(1) rotate(0);
+  }
+}

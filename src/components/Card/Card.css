@@ -1,0 +1,58 @@
+.card {
+  min-width: 120px;
+  height: 208px;
+  border-radius: 8px;
+  /* padding: 16px; */
+  border: 1px solid #c3c2bd;
+  text-align: center;
+  color: #c3c2bd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__active {
+  border: 2px solid #ff0633;
+  position: relative;
+}
+
+.card__active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -1px;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background: url("../../../public/triangle.png") no-repeat center;
+  background-size: cover;
+}
+
+.card__label {
+  font-family: "Alumni Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 1%;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+.card__pic {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  object-fit: contain;
+}
+
+.card__value {
+  font-family: "Kelly Slab", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32px;
+  line-height: 32px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
