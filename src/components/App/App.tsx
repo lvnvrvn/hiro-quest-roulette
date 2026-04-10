@@ -7,6 +7,7 @@ import Modal from "../Modal/Modal";
 export default function App() {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [winnerPrize, setWinnerPrize] = useState<IPrize | null>(null);
+  const [hasSpunToday, setHasSpunToday] = useState<boolean>(false);
 
   const handleWin = (prize: IPrize) => {
     setWinnerPrize(prize);
@@ -15,12 +16,13 @@ export default function App() {
 
   return (
     <>
-      <Roulette onWin={handleWin} />
+      <Roulette onWin={handleWin} hasTimerStarted={hasSpunToday} />
       <Modal
         isOpen={isModalOpen}
         prize={winnerPrize}
         onClose={() => {
           setIsModalOpen(false);
+          setHasSpunToday(true);
         }}
       />
     </>

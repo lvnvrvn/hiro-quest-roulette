@@ -109,7 +109,17 @@
   filter: grayscale(1);
 }
 
-.roulette__spin__btn:hover img {
+.roulette__spin__btn.winned {
+  background: #fdfdfd;
+  color: #1e2025;
+}
+
+.roulette__spin__btn__icon {
+  width: 24px;
+  height: 24px;
+}
+
+.roulette__spin__btn:hover .roulette__spin__btn__icon {
   animation: presentMove 0.7s ease-out 0.1s 1 normal none;
   transition: all 0.2s linear;
 }
@@ -195,4 +205,53 @@
   background: url("../../../public/week-prize.png") no-repeat center;
   background-size: cover;
   z-index: -1;
+}
+
+.roulette__timer {
+  margin: 16px 0;
+  display: flex;
+  column-gap: 18px;
+}
+
+.roulette__timer__div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 4px;
+}
+
+.roulette__timer__div__digs {
+  display: flex;
+  column-gap: 4px;
+}
+
+.roulette__timer__div__dig {
+  width: 40px;
+  text-align: center;
+  padding: 8px;
+  border-radius: 4px;
+  padding: 8px;
+  border: 1px solid #fdfdfd;
+  font-family: "Kelly Slab", sans-serif;
+  font-size: 44px;
+  color: #fdfdfd;
+  position: relative;
+}
+
+.roulette__timer__div__dig.colon::after {
+  content: ":";
+  position: absolute;
+  top: 50%;
+  right: -15px;
+  transform: translateY(-60%);
+  font-family: "Kelly Slab", sans-serif;
+  font-size: 44px;
+  color: #fdfdfd;
+}
+
+.roulette__timer__div__text {
+  font-family: "Alumni Sans", sans-serif;
+  font-size: 20px;
+  letter-spacing: 1%;
+  color: #c3c2bd;
 }

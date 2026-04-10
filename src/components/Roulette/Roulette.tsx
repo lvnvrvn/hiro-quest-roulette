@@ -1,18 +1,43 @@
 import "./Roulette.css";
 import extendedPrizes, { type IPrize } from "../../constants/prizes";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import Card from "../Card/Card";
 
 interface IRouletteProps {
   onWin: (prize: IPrize) => void;
+  hasTimerStarted: boolean;
 }
 
-export default function Roulette({ onWin }: IRouletteProps) {
+export default function Roulette({ onWin, hasTimerStarted }: IRouletteProps) {
   const [prizeIndex, setPrizeIndex] = useState<number | null>(null);
   const [isSpinning, setIsSpinning] = useState<boolean>(false);
   const [currentDay, setCurrentDay] = useState<number>(1);
-  //   const [showModal, setShowModal] = useState<boolean>(true);
+
+  const [secondsLeft, setSecondsLeft] = useState<number>(24 * 60 * 60);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setSecondsLeft((prev) => (prev > 0 ? prev - 1 : 0));
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  function formatTime(totalSeconds: number) {
+    const hrs = Math.floor(totalSeconds / 3600);
+    const mins = Math.floor((totalSeconds % 3600) / 60);
+    const secs = totalSeconds % 60;
+
+    return {
+      hours: String(hrs).padStart(2, "0"),
+      minutes: String(mins).padStart(2, "0"),
+      seconds: String(secs).padStart(2, "0"),
+    };
+  }
+
+  const { hours, minutes, seconds } = formatTime(secondsLeft);
+
   const containerRef = useRef<HTMLDivElement>(null);
 
   const controls = useAnimation();
@@ -68,27 +93,67 @@ export default function Roulette({ onWin }: IRouletteProps) {
       </p>
       <div className="fortune__wheel__pic"></div>
 
-      <div className="roulette__cards__wrapper">
-        <motion.div className="roulette__cards__container" animate={controls}>
-          {extendedPrizes.map((prize, index) => (
-            <Card
-              key={index}
-              label={prize.label}
-              value={prize.value}
-              pic={prize.pic}
-              isActive={index === prizeIndex}
-            />
-          ))}
-        </motion.div>
-      </div>
+      {/* {!hasSpunToday ? <Roulette onWin={handleWin} /> : <Timer />} */}
+
+      {!hasTimerStarted ? (
+        <div className="roulette__cards__wrapper">
+          <motion.div className="roulette__cards__container" animate={controls}>
+            {extendedPrizes.map((prize, index) => (
+              <Card
+                key={index}
+                label={prize.label}
+                value={prize.value}
+                pic={prize.pic}
+                isActive={index === prizeIndex}
+              />
+            ))}
+          </motion.div>
+        </div>
+      ) : (
+        <div className="roulette__timer">
+          <div className="roulette__timer__div">
+            <div className="roulette__timer__div__digs">
+              <div className="roulette__timer__div__dig">{hours[0]}</div>
+              <div className="roulette__timer__div__dig colon">{hours[1]}</div>
+            </div>
+            <div className="roulette__timer__div__text">Часы</div>
+          </div>
+          <div className="roulette__timer__div">
+            <div className="roulette__timer__div__digs">
+              <div className="roulette__timer__div__dig">{minutes[0]}</div>
+              <div className="roulette__timer__div__dig colon">
+                {minutes[1]}
+              </div>
+            </div>
+            <div className="roulette__timer__div__text">Минуты</div>
+          </div>
+          <div className="roulette__timer__div">
+            <div className="roulette__timer__div__digs">
+              <div className="roulette__timer__div__dig">{seconds[0]}</div>
+              <div className="roulette__timer__div__dig">{seconds[1]}</div>
+            </div>
+            <div className="roulette__timer__div__text">Секунды</div>
+          </div>
+        </div>
+      )}
 
       <button
         onClick={handleStart}
         disabled={isSpinning}
-        className={`roulette__spin__btn ${isSpinning ? "disabled" : ""}`}
+        className={`roulette__spin__btn ${isSpinning ? "disabled" : ""}${hasTimerStarted ? "winned" : ""}`}
       >
-        <span>{isSpinning ? "Крутим" : "Испытать удачу"}</span>
-        <img src="../../public/btn-icon.png" alt="" />
+        <span>
+          {!hasTimerStarted
+            ? isSpinning
+              ? "Крутим"
+              : "Испытать удачу"
+            : "Забрать награду"}
+        </span>
+        <img
+          className="roulette__spin__btn__icon"
+          src={`../../public/btn-icon${hasTimerStarted ? "-pink" : ""}.png`}
+          alt=""
+        />
       </button>
 
       <p className="roulette__promotion__text">
