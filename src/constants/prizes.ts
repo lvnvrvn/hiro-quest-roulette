@@ -12,7 +12,7 @@ const PRIZES: IPrize[] = [
     id: 2,
     label: "Бесплатные",
     value: "3 дня",
-    pic: "1",
+    pic: "2",
     isActive: false,
   },
   { id: 3, label: "Скидка", value: "50%", pic: "1", isActive: false },
