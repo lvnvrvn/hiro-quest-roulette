@@ -1,0 +1,97 @@
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  backdrop-filter: blur(4px);
+}
+
+.roulette__modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 476px;
+  border-radius: 28px;
+  padding: 32px 24px;
+  background: #1e2025;
+  box-shadow:
+    0px 4px 4px 0px #0000004d,
+    0px 8px 12px 6px #00000026;
+  text-align: center;
+  z-index: 1000;
+}
+
+.roulette__modal__title {
+  font-family: "Alumni Sans", sans-serif;
+  font-weight: 600;
+  font-size: 44px;
+  letter-spacing: 1%;
+  line-height: 1;
+  color: #fdfdfd;
+}
+
+.roulette__modal__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.roulette__modal__content-left {
+  font-family: "Alumni Sans", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 1%;
+  text-transform: uppercase;
+  color: #fdfdfd;
+}
+
+.roulette__modal__content-pic {
+  width: 120px;
+  height: 120px;
+}
+
+.roulette__modal__content-right {
+  font-family: "Kelly Slab", sans-serif;
+  font-size: 32px;
+  color: #fdfdfd;
+}
+
+.roulette__modal__postscript {
+  font-family: "Alumni Sans", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 1%;
+  color: #fdfdfd;
+}
+
+.roulette__modal__btn {
+  width: 100%;
+  border-radius: 40px;
+  padding: 8px 24px;
+  background: #ff0633;
+  box-shadow:
+    0px 4px 4px 0px #0000004d,
+    0px 8px 12px 6px #00000026;
+  font-family: "Alumni Sans", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  letter-spacing: 1%;
+  text-transform: uppercase;
+  color: #fdfdfd;
+  border: none;
+  margin-top: 24px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.roulette__modal__btn:hover {
+  transform: scale(0.95);
+}
