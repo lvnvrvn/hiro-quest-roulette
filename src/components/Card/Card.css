@@ -13,20 +13,8 @@
 }
 
 .card__active {
-  border: 2px solid #ff0633;
-  position: relative;
-}
-
-.card__active::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -1px;
-  transform: translateX(-50%);
-  width: 20px;
-  height: 20px;
-  background: url("../../../public/triangle.png") no-repeat center;
-  background-size: cover;
+  /* border: 2px solid #ff0633; */
+  /* position: relative; */
 }
 
 .card__label {

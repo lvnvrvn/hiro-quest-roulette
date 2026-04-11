@@ -66,6 +66,36 @@
   background: linear-gradient(to left, rgba(30, 32, 37, 0.9), transparent);
 }
 
+.roulette__cards__focus__frame {
+  width: 120px;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 2px);
+  transform: translate(-50%, -50%);
+  border: 2px solid #ff0633;
+  border-radius: 8px;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+
+.roulette__cards__focus__frame::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -1px;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background: url("../../../public/triangle.png") no-repeat center;
+  background-size: cover;
+}
+
+.roulette__cards__focus__frame.active {
+  opacity: 1;
+}
+
 .roulette__cards__container {
   display: flex;
   column-gap: 4px;

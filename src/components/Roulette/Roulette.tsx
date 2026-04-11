@@ -108,6 +108,9 @@ export default function Roulette({ onWin, hasTimerStarted }: IRouletteProps) {
               />
             ))}
           </motion.div>
+          <div
+            className={`roulette__cards__focus__frame ${isSpinning || prizeIndex ? "active" : ""}`}
+          ></div>
         </div>
       ) : (
         <div className="roulette__timer">
