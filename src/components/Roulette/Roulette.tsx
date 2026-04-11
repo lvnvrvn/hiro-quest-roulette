@@ -75,7 +75,7 @@ export default function Roulette({ onWin, hasTimerStarted }: IRouletteProps) {
     const winningPrize = extendedPrizes[randomIndex];
     setTimeout(() => {
       onWin(winningPrize);
-    }, 600);
+    }, 800);
 
     setIsSpinning(false);
 
@@ -109,7 +109,7 @@ export default function Roulette({ onWin, hasTimerStarted }: IRouletteProps) {
             ))}
           </motion.div>
           <div
-            className={`roulette__cards__focus__frame ${isSpinning || prizeIndex ? "active" : ""}`}
+            className={`roulette__cards__focus__frame ${isSpinning || prizeIndex ? "active" : ""} ${prizeIndex && "winned"}`}
           ></div>
         </div>
       ) : (

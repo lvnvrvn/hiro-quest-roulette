@@ -13,8 +13,7 @@
 }
 
 .card__active {
-  /* border: 2px solid #ff0633; */
-  /* position: relative; */
+  border: none;
 }
 
 .card__label {
