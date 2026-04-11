@@ -1,0 +1,110 @@
+.footer,
+.footer__content {
+  width: 100%;
+}
+
+.footer {
+  border: 2px solid #2e3139;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom: none;
+}
+
+.footer__content {
+  padding: 40px 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.footer__column__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 28px;
+}
+
+.footer__column__item {
+  list-style-type: none;
+}
+
+.footer__column__title.logo {
+  font-family: "Kelly Slab", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #c3c2bd;
+  position: relative;
+  width: max-content;
+}
+
+.footer__column__title.logo::after {
+  content: "vpn";
+  position: absolute;
+  top: 29%;
+  left: 94%;
+  transform: rotate(-90deg);
+  font-family: "Kelly Slab", sans-serif;
+  font-weight: 400;
+  font-size: 9.82px;
+  text-transform: uppercase;
+  color: #c3c2bd;
+}
+
+.footer__column__item {
+  display: flex;
+  align-items: center;
+}
+
+.footer__column__icon {
+  width: 24px;
+  margin-right: 16px;
+}
+
+.footer__column__link {
+  font-family: "Kelly Slab", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #fdfdfd;
+}
+
+.footer__column__link.telegram {
+  padding: 14px 16px;
+  border-radius: 40px;
+  background: #fdfdfd;
+  font-family: "Kelly Slab", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #1e2025;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  transition: all 0.2s linear;
+}
+
+.footer__column__link.telegram:hover {
+  transform: translateY(-2px);
+}
+
+.footer__column__item__icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 16px;
+}
+
+.footer__column__title {
+  font-family: "Alumni Sans", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 1%;
+  text-transform: uppercase;
+  color: #c3c2bd;
+}
+
+.footer__copyright {
+  padding: 16px 0 24px;
+  border-top: 1px solid #2e3139;
+  text-align: center;
+  font-family: "Alumni Sans", sans-serif;
+  font-size: 20px;
+  letter-spacing: 1%;
+  color: #c3c2bd;
+}

@@ -4,6 +4,68 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   background: #1e2025;
+}
+
+.page__container {
+  width: 100%;
+  max-width: 1176px;
+  margin: 0 auto;
+}
+
+.page__title {
+  font-family: "Kelly Slab", sans-serif;
+  font-weight: 400;
+  font-size: 64px;
+  text-transform: uppercase;
+  color: #fdfdfd;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.page__subtitle {
+  font-family: "Kelly Slab", sans-serif;
+  font-weight: 400;
+  font-size: 44px;
+  color: #fdfdfd;
+  margin: 32px 0;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.page__subtitle img {
+  width: 12px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+
+.page__subtitle img:hover {
+  transform: scale(1.2);
+}
+
+.section__roulette {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section__quests {
+  margin: 32px 0 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 44px 24px;
+  grid-auto-rows: 1fr;
+}
+
+@media (max-width: 1024px) {
+  .page__container {
+    width: 928px;
+  }
 }
