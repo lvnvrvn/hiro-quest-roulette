@@ -9,6 +9,7 @@
 .header__logo {
   font-family: "Kelly Slab", sans-serif;
   font-size: 44px;
+  line-height: 44px;
   text-transform: uppercase;
   color: #fdfdfd;
   position: relative;
@@ -18,10 +19,11 @@
   content: "vpn";
   position: absolute;
   top: 28%;
-  right: 0;
-  transform: rotate(-90deg) translateY(calc(100% + 5px));
+  left: 92%;
+  transform: rotate(-90deg);
   font-family: "Kelly Slab", sans-serif;
   font-size: 18px;
+  line-height: 18px;
   text-transform: uppercase;
   color: #fdfdfd;
 }
@@ -78,6 +80,8 @@
 .header__lang__change {
   font-family: "Kelly Slab", sans-serif;
   font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
   color: #fdfdfd;
   position: relative;
   transition: all 0.1s linear;
@@ -115,4 +119,96 @@
   top: 100%;
   left: 0;
   pointer-events: none;
+}
+
+.header__burger__btn {
+  position: relative;
+  /* width: 16px;
+  height: 10px; */
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  display: none;
+}
+
+.header__burger__btn__icon {
+  width: 100%;
+  /* height: 100%; */
+}
+
+/* .header__burger__btn:hover {
+  transform: scale(1.05);
+}
+
+.header__burger__btn::before,
+.header__burger__btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.header__burger__btn__stick,
+.header__burger__btn::before,
+.header__burger__btn::after {
+  width: 100%;
+  height: 1px;
+  background: #fdfdfd;
+  transition: all 0.2s linear;
+}
+
+.header__burger__btn::before {
+  top: 0;
+}
+
+.header__burger__btn::after {
+  bottom: 0;
+}
+
+.header__burger__btn.active {
+  transform: rotate(45deg);
+}
+
+.header__burger__btn.active::before {
+  opacity: 0;
+}
+
+.header__burger__btn.active::after {
+  top: 44%;
+  transform: rotate(90deg);
+} */
+
+@media (max-width: 1088px) {
+  .header__nav {
+    display: none;
+  }
+  .header__burger__btn {
+    display: flex;
+  }
+  .header__lang__change::after {
+    right: -15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 18px 0;
+  }
+  .header__lang__change {
+    margin-right: 24px;
+  }
+  .header__lang__change::after {
+    right: -25px;
+  }
+}
+
+@media (max-width: 375px) {
+  .header__lang__change {
+    margin-right: 23px;
+  }
+  .header__lang__change::after {
+    right: -18px;
+  }
 }

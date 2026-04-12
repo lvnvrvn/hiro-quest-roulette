@@ -10,10 +10,6 @@
   height: 100%;
 }
 
-/* .quest__card.completed {
-  justify-content: start;
-} */
-
 .quest__card.active__quest {
   width: 576px;
   background: #fdfdfd;
@@ -27,6 +23,7 @@
   background: #ff0633;
   font-family: "Alumni Sans", sans-serif;
   font-size: 20px;
+  line-height: 20px;
   letter-spacing: 1%;
   color: #fdfdfd;
   box-shadow:
@@ -44,6 +41,7 @@
   font-family: "Alumni Sans", sans-serif;
   font-weight: 600;
   font-size: 32px;
+  line-height: 32px;
   letter-spacing: 1%;
   text-transform: uppercase;
   color: #fdfdfd;
@@ -54,6 +52,7 @@
   margin-top: 8px;
   font-family: "Alumni Sans", sans-serif;
   font-size: 20px;
+  line-height: 20px;
   letter-spacing: 1%;
   color: #c3c2bd;
 }
@@ -67,6 +66,7 @@
   font-family: "Alumni Sans", sans-serif;
   font-weight: 600;
   font-size: 24px;
+  line-height: 24px;
   letter-spacing: 1%;
   text-transform: uppercase;
   color: #1e2025;
@@ -85,4 +85,17 @@
 .quest__card__btn img {
   width: 24px;
   margin-left: 16px;
+}
+
+@media (max-width: 1024px) {
+  .section__quests {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 745px) {
+  .section__quests {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

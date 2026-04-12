@@ -12,6 +12,7 @@
   font-optical-sizing: auto;
   font-weight: 600;
   font-size: 32px;
+  line-height: 32px;
   letter-spacing: 1%;
   text-transform: uppercase;
   color: #fdfdfd;
@@ -20,9 +21,7 @@
 .roulette__text {
   font-family: "Alumni Sans", sans-serif;
   font-weight: 400;
-  font-style: Regular;
   font-size: 20px;
-  leading-trim: NONE;
   line-height: 20px;
   letter-spacing: 1%;
   vertical-align: middle;
@@ -124,20 +123,24 @@
   box-shadow:
     0px 4px 4px 0px #0000004d,
     0px 8px 12px 6px #00000026;
-  font-family: "Alumni Sans", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 24px;
-  letter-spacing: 1%;
-  vertical-align: middle;
-  text-transform: uppercase;
-  color: #fdfdfd;
+
   display: flex;
   justify-content: center;
   align-items: center;
   column-gap: 16px;
   cursor: pointer;
   transition: all 0.2s linear;
+}
+
+.roulette__spin__btn span {
+  font-family: "Alumni Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 1%;
+  text-transform: uppercase;
+  color: #fdfdfd;
 }
 
 .roulette__spin__btn:hover {
@@ -152,6 +155,10 @@
 
 .roulette__spin__btn.winned {
   background: #fdfdfd;
+  color: #1e2025;
+}
+
+.roulette__spin__btn.winned span {
   color: #1e2025;
 }
 
@@ -191,6 +198,7 @@
 .roulette__promotion__text {
   font-family: "Alumni Sans", sans-serif;
   font-size: 20px;
+  line-height: 20px;
   letter-spacing: 1%;
   color: #fdfdfd;
   margin: 16px 0 10px 0;
@@ -221,6 +229,7 @@
   font-family: "Alumni Sans", sans-serif;
   font-weight: 600;
   font-size: 44px;
+  line-height: 44px;
   letter-spacing: 1%;
   color: #fdfdfd;
   cursor: pointer;
@@ -275,6 +284,7 @@
   border: 1px solid #fdfdfd;
   font-family: "Kelly Slab", sans-serif;
   font-size: 44px;
+  line-height: 44px;
   color: #fdfdfd;
   position: relative;
 }
@@ -295,4 +305,47 @@
   font-size: 20px;
   letter-spacing: 1%;
   color: #c3c2bd;
+}
+
+@media (max-width: 1024px) {
+  .roulette {
+    width: 452px;
+  }
+}
+
+@media (max-width: 980px) {
+  .roulette {
+    width: 348px;
+  }
+  .roulette__promotion__progress {
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 745px) {
+  .section__roulette {
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+  .roulette {
+    width: 343px;
+    margin-bottom: 24px;
+  }
+  .roulette__promotion__progress {
+    padding: 8px 20px;
+  }
+}
+
+@media (max-width: 358px) {
+  .roulette {
+    width: 280px;
+  }
+  .fortune__wheel__pic {
+    display: none;
+  }
+  .roulette__timer {
+    transform: scale(0.9) translateX(-30px);
+  }
 }

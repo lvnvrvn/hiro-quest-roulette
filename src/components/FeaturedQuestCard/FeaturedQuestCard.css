@@ -3,7 +3,6 @@
   position: relative;
   padding: 24px;
   background: #fdfdfd;
-  border-radius: 8px;
   border: 1px solid #2e3139;
 }
 
@@ -15,6 +14,7 @@
   background: #ff0633;
   font-family: "Alumni Sans", sans-serif;
   font-size: 20px;
+  line-height: 20px;
   letter-spacing: 1%;
   color: #fdfdfd;
   box-shadow:
@@ -26,6 +26,7 @@
   font-family: "Alumni Sans", sans-serif;
   font-weight: 600;
   font-size: 32px;
+  line-height: 32px;
   letter-spacing: 1%;
   text-transform: uppercase;
   color: #1e2025;
@@ -39,6 +40,7 @@
 .featured__quest__card__text p {
   font-family: "Alumni Sans", sans-serif;
   font-size: 20px;
+  line-height: 20px;
   letter-spacing: 1%;
   color: #2e3139;
 }
@@ -54,8 +56,46 @@
   font-family: "Alumni Sans", sans-serif;
   font-weight: 600;
   font-size: 24px;
+  line-height: 24px;
   letter-spacing: 1%;
   text-transform: uppercase;
   color: #fdfdfd;
   border: none;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.featured__quest__card__btn:hover {
+  box-shadow: 0 5px 15px rgba(255, 6, 51, 0.5);
+  transform: scale(0.95);
+}
+
+@media (max-width: 1257px) {
+  .featured__quest__card {
+    width: 400px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .featured__quest__card {
+    max-width: 452px;
+  }
+}
+
+@media (max-width: 977px) {
+  .featured__quest__card {
+    max-width: 348px;
+  }
+}
+
+@media (max-width: 375px) {
+  .featured__quest__card {
+    max-width: 343px;
+  }
+}
+
+@media (max-width: 358px) {
+  .featured__quest__card {
+    max-width: 280px;
+  }
 }

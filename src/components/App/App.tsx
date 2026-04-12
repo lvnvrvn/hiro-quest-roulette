@@ -21,10 +21,13 @@ export default function App() {
   };
 
   const fireConfetti = () => {
+    const isMobile = window.innerWidth < 375;
+
     confetti({
-      particleCount: 150,
-      spread: 200,
+      particleCount: isMobile ? 100 : 150,
+      spread: isMobile ? 45 : 200,
       origin: { y: 0.6 },
+      scalar: isMobile ? 0.8 : 1.2,
       colors: ["#E30613", "#ffffff", "#FFD700"],
       zIndex: 1010,
     });

@@ -181,12 +181,12 @@ export default function Footer() {
               </a>
             </li>
             <li className="footer__column__item">
-              <a href="#" className="footer__column__link">
+              <a href="#" className="footer__column__link support">
                 Публичная оферта
               </a>
             </li>
             <li className="footer__column__item">
-              <a href="#" className="footer__column__link">
+              <a href="#" className="footer__column__link support">
                 Пользовательское соглашение
               </a>
             </li>

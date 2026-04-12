@@ -11,7 +11,7 @@
 }
 
 .footer__content {
-  padding: 40px 24px;
+  padding: 40px 24px 24px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
@@ -26,10 +26,15 @@
   list-style-type: none;
 }
 
+.footer__column__title {
+  margin-bottom: 2px;
+}
+
 .footer__column__title.logo {
   font-family: "Kelly Slab", sans-serif;
   font-weight: 400;
   font-size: 24px;
+  line-height: 24px;
   text-transform: uppercase;
   color: #c3c2bd;
   position: relative;
@@ -39,8 +44,8 @@
 .footer__column__title.logo::after {
   content: "vpn";
   position: absolute;
-  top: 29%;
-  left: 94%;
+  top: -3%;
+  left: 93%;
   transform: rotate(-90deg);
   font-family: "Kelly Slab", sans-serif;
   font-weight: 400;
@@ -63,6 +68,7 @@
   font-family: "Kelly Slab", sans-serif;
   font-weight: 400;
   font-size: 20px;
+  line-height: 20px;
   color: #fdfdfd;
 }
 
@@ -73,15 +79,26 @@
   font-family: "Kelly Slab", sans-serif;
   font-weight: 400;
   font-size: 20px;
+  line-height: 20px;
   color: #1e2025;
   display: flex;
   align-items: center;
   width: max-content;
   transition: all 0.2s linear;
+  margin: -12px 0 -2px;
 }
 
 .footer__column__link.telegram:hover {
   transform: translateY(-2px);
+}
+
+.footer__column__link.support {
+  font-family: "Alumni Sans", sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 1%;
+  color: #fdfdfd;
+  margin-bottom: -8px;
 }
 
 .footer__column__item__icon {
@@ -94,6 +111,7 @@
   font-family: "Alumni Sans", sans-serif;
   font-weight: 600;
   font-size: 24px;
+  line-height: 24px;
   letter-spacing: 1%;
   text-transform: uppercase;
   color: #c3c2bd;
@@ -105,6 +123,24 @@
   text-align: center;
   font-family: "Alumni Sans", sans-serif;
   font-size: 20px;
+  line-height: 20px;
   letter-spacing: 1%;
   color: #c3c2bd;
+}
+
+@media (max-width: 768px) {
+  .footer__content {
+    padding: 40px 16px 24px;
+  }
+}
+
+@media (max-width: 745px) {
+  .footer__content {
+    padding: 40px 16px 34px;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 38px;
+  }
+  .footer__column__title:not(.logo) {
+    margin: 0 auto;
+  }
 }
