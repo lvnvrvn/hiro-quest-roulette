@@ -49,7 +49,7 @@ export default function Footer() {
             <li className="footer__column__item">
               <img
                 className="footer__column__icon"
-                src="../../../public/download/appstore.png"
+                src="/download/appstore.png"
                 alt=""
               />
               <a href="#" className="footer__column__link">
@@ -58,7 +58,7 @@ export default function Footer() {
             </li>
             <li className="footer__column__item">
               <img
-                src="../../../public/download/googleplay.png"
+                src="/download/googleplay.png"
                 alt=""
                 className="footer__column__icon"
               />
@@ -68,7 +68,7 @@ export default function Footer() {
             </li>
             <li className="footer__column__item">
               <img
-                src="../../../public/download/android.png"
+                src="/download/android.png"
                 alt=""
                 className="footer__column__icon"
               />
@@ -78,7 +78,7 @@ export default function Footer() {
             </li>
             <li className="footer__column__item">
               <img
-                src="../../../public/download/windows.png"
+                src="/download/windows.png"
                 alt=""
                 className="footer__column__icon"
               />
@@ -88,7 +88,7 @@ export default function Footer() {
             </li>
             <li className="footer__column__item">
               <img
-                src="../../../public/download/macos.png"
+                src="/download/macos.png"
                 alt=""
                 className="footer__column__icon"
               />
@@ -98,7 +98,7 @@ export default function Footer() {
             </li>
             <li className="footer__column__item">
               <img
-                src="../../../public/download/linux.png"
+                src="/download/linux.png"
                 alt=""
                 className="footer__column__icon"
               />
@@ -114,18 +114,14 @@ export default function Footer() {
               <h5 className="footer__column__title">Способы оплаты</h5>
             </li>
             <li className="footer__column__item">
-              <img
-                src="../../../public/pay/sbp.png"
-                alt=""
-                className="footer__column__icon"
-              />
+              <img src="/pay/sbp.png" alt="" className="footer__column__icon" />
               <a href="#" className="footer__column__link">
                 СБП
               </a>
             </li>
             <li className="footer__column__item">
               <img
-                src="../../../public/pay/sberpay.png"
+                src="/pay/sberpay.png"
                 alt=""
                 className="footer__column__icon"
               />
@@ -135,7 +131,7 @@ export default function Footer() {
             </li>
             <li className="footer__column__item">
               <img
-                src="../../../public/pay/tinkoffpay.png"
+                src="/pay/tinkoffpay.png"
                 alt=""
                 className="footer__column__icon"
               />
@@ -145,7 +141,7 @@ export default function Footer() {
             </li>
             <li className="footer__column__item">
               <img
-                src="../../../public/pay/card.png"
+                src="/pay/card.png"
                 alt=""
                 className="footer__column__icon"
               />
@@ -155,7 +151,7 @@ export default function Footer() {
             </li>
             <li className="footer__column__item">
               <img
-                src="../../../public/pay/crypt.png"
+                src="/pay/crypt.png"
                 alt=""
                 className="footer__column__icon"
               />
@@ -174,7 +170,7 @@ export default function Footer() {
               <a href="#" className="footer__column__link telegram">
                 Telegram
                 <img
-                  src="../../../public/tg-icon.png"
+                  src="/tg-icon.png"
                   alt=""
                   className="footer__column__item__icon"
                 />

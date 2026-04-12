@@ -19,9 +19,7 @@ export default function QuestCard(quest: IQuest) {
           className="quest__card__btn"
         >
           {quest.btnText}
-          {quest.btnIcon && (
-            <img src={`../../../public/${quest.btnIcon}.png`} />
-          )}
+          {quest.btnIcon && <img src={`/${quest.btnIcon}.png`} />}
         </button>
       )}
     </div>

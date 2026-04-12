@@ -47,7 +47,7 @@ export default function App() {
         <main className="page__content">
           <h1 className="page__title">Аккаунт</h1>
           <h2 className="page__subtitle">
-            Квесты <img src="../../../public/close-icon.png" alt="X" />
+            Квесты <img src="/close-icon.png" alt="X" />
           </h2>
           <section className="section__roulette">
             <Roulette onWin={handleWin} hasTimerStarted={hasSpunToday} />

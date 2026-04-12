@@ -16,7 +16,7 @@ export default function Header() {
         className={`header__burger__btn ${isBurgerActive ? "active" : ""}`}
       >
         <img
-          src={`../../../public/${isBurgerActive ? "close" : "burger"}-icon.png`}
+          src={`/${isBurgerActive ? "close" : "burger"}-icon.png`}
           alt=""
           className="header__burger__btn__icon"
         />

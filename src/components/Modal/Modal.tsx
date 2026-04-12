@@ -49,7 +49,7 @@ export default function Modal({ isOpen, prize, onClose }: IModalProps) {
                   </span>
                   <img
                     className="roulette__modal__content-pic"
-                    src={`../../public/win${prize.pic}.png`}
+                    src={`/win${prize.pic}.png`}
                     alt="Image"
                   />
                   <span className="roulette__modal__content-right">

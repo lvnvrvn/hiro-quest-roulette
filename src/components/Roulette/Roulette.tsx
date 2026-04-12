@@ -152,7 +152,7 @@ export default function Roulette({ onWin, hasTimerStarted }: IRouletteProps) {
         </span>
         <img
           className="roulette__spin__btn__icon"
-          src={`../../public/btn-icon${hasTimerStarted ? "-pink" : ""}.png`}
+          src={`/btn-icon${hasTimerStarted ? "-pink" : ""}.png`}
           alt=""
         />
       </button>
