@@ -4,7 +4,7 @@
 }
 
 .footer {
-  border: 2px solid #2e3139;
+  border: 2px solid var(--color-additional-grey-2);
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   border-bottom: none;
@@ -31,12 +31,12 @@
 }
 
 .footer__column__title.logo {
-  font-family: "Kelly Slab", sans-serif;
+  font-family: var(--font-additional);
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
-  color: #c3c2bd;
+  color: var(--color-additional-grey-1);
   position: relative;
   width: max-content;
 }
@@ -47,11 +47,11 @@
   top: -3%;
   left: 93%;
   transform: rotate(-90deg);
-  font-family: "Kelly Slab", sans-serif;
+  font-family: var(--font-additional);
   font-weight: 400;
   font-size: 9.82px;
   text-transform: uppercase;
-  color: #c3c2bd;
+  color: var(--color-additional-grey-1);
 }
 
 .footer__column__item {
@@ -65,22 +65,21 @@
 }
 
 .footer__column__link {
-  font-family: "Kelly Slab", sans-serif;
+  font-family: var(--font-additional);
   font-weight: 400;
   font-size: 20px;
   line-height: 20px;
-  color: #fdfdfd;
 }
 
 .footer__column__link.telegram {
   padding: 14px 16px;
   border-radius: 40px;
-  background: #fdfdfd;
-  font-family: "Kelly Slab", sans-serif;
+  background-color: var(--color-main-contrast);
+  font-family: var(--font-additional);
   font-weight: 400;
   font-size: 20px;
   line-height: 20px;
-  color: #1e2025;
+  color: var(--color-fill);
   display: flex;
   align-items: center;
   width: max-content;
@@ -93,11 +92,10 @@
 }
 
 .footer__column__link.support {
-  font-family: "Alumni Sans", sans-serif;
+  font-family: var(--font-main);
   font-size: 20px;
   line-height: 20px;
   letter-spacing: 1%;
-  color: #fdfdfd;
   margin-bottom: -8px;
 }
 
@@ -108,24 +106,22 @@
 }
 
 .footer__column__title {
-  font-family: "Alumni Sans", sans-serif;
   font-weight: 600;
   font-size: 24px;
   line-height: 24px;
   letter-spacing: 1%;
   text-transform: uppercase;
-  color: #c3c2bd;
+  color: var(--color-additional-grey-1);
 }
 
 .footer__copyright {
   padding: 16px 0 24px;
-  border-top: 1px solid #2e3139;
+  border-top: 1px solid var(--color-additional-grey-2);
   text-align: center;
-  font-family: "Alumni Sans", sans-serif;
   font-size: 20px;
   line-height: 20px;
   letter-spacing: 1%;
-  color: #c3c2bd;
+  color: var(--color-additional-grey-1);
 }
 
 @media (max-width: 768px) {

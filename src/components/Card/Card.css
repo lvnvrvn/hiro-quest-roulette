@@ -2,10 +2,9 @@
   min-width: 120px;
   height: 208px;
   border-radius: 8px;
-  /* padding: 16px; */
-  border: 1px solid #c3c2bd;
+  border: 1px solid var(--color-additional-grey-1);
   text-align: center;
-  color: #c3c2bd;
+  color: var(--color-additional-grey-1);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,7 +16,6 @@
 }
 
 .card__label {
-  font-family: "Alumni Sans", sans-serif;
   font-weight: 600;
   font-style: normal;
   font-size: 24px;
@@ -35,7 +33,7 @@
 }
 
 .card__value {
-  font-family: "Kelly Slab", sans-serif;
+  font-family: var(--font-additional);
   font-weight: 400;
   font-style: normal;
   font-size: 32px;

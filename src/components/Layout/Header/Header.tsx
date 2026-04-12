@@ -1,6 +1,6 @@
 import "./Header.css";
 import { useState } from "react";
-import { AnimatePresence, motion, useAnimation } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import MobileMenu from "../MobileMenu/MobileMenu";
 
 export default function Header() {
@@ -26,7 +26,6 @@ export default function Header() {
         Hiro
       </a>
       <nav className="header__nav">
-        {/* <ul className={`header__nav__list ${isBurgerActive ? "mobile" : ""}`}> */}
         <ul className="header__nav__list">
           <li className="header__nav__list__item">FAQ</li>
           <li className="header__nav__list__item">Тарифы</li>

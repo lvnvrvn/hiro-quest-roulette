@@ -93,8 +93,6 @@ export default function Roulette({ onWin, hasTimerStarted }: IRouletteProps) {
       </p>
       <div className="fortune__wheel__pic"></div>
 
-      {/* {!hasSpunToday ? <Roulette onWin={handleWin} /> : <Timer />} */}
-
       {!hasTimerStarted ? (
         <div className="roulette__cards__wrapper">
           <motion.div className="roulette__cards__container" animate={controls}>

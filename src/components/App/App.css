@@ -1,15 +1,31 @@
+:root {
+  --color-main-contrast: #fdfdfd;
+  --color-additional-grey-1: #c3c2bd;
+  --color-additional-grey-2: #2e3139;
+  --color-fill: #1e2025;
+  --color-accent: #ff0633;
+  --font-main: "Alumni Sans", sans-serif;
+  --font-additional: "Kelly Slab", sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
+body {
+  background-color: var(--color-fill);
+  color: var(--color-main-contrast);
+  font-family: var(--font-main);
 }
 
-body {
-  background: #1e2025;
+button,
+a {
+  font-family: inherit;
+  color: inherit;
+  text-decoration: none;
+  border: none;
 }
 
 .page__container {
@@ -19,21 +35,19 @@ body {
 }
 
 .page__title {
-  font-family: "Kelly Slab", sans-serif;
+  font-family: var(--font-additional);
   font-weight: 400;
   font-size: 64px;
   line-height: 64px;
   text-transform: uppercase;
-  color: #fdfdfd;
   margin-top: 40px;
   text-align: center;
 }
 
 .page__subtitle {
-  font-family: "Kelly Slab", sans-serif;
+  font-family: var(--font-additional);
   font-weight: 400;
   font-size: 44px;
-  color: #fdfdfd;
   margin: 32px 0;
   display: flex;
   align-items: start;

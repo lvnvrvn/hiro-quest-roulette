@@ -2,8 +2,8 @@
   width: 576px;
   position: relative;
   padding: 24px;
-  background: #fdfdfd;
-  border: 1px solid #2e3139;
+  background-color: var(--color-main-contrast);
+  border: 1px solid var(--color-additional-grey-2);
 }
 
 .featured__quest__card__status {
@@ -11,25 +11,22 @@
   left: 24px;
   top: 0;
   padding: 2px 8px;
-  background: #ff0633;
-  font-family: "Alumni Sans", sans-serif;
+  background-color: var(--color-accent);
   font-size: 20px;
   line-height: 20px;
   letter-spacing: 1%;
-  color: #fdfdfd;
   box-shadow:
     0px 4px 4px 0px #0000004d,
     0px 8px 12px 6px #00000026;
 }
 
 .featured__quest__card__title {
-  font-family: "Alumni Sans", sans-serif;
   font-weight: 600;
   font-size: 32px;
   line-height: 32px;
   letter-spacing: 1%;
   text-transform: uppercase;
-  color: #1e2025;
+  color: var(--color-fill);
   margin-top: 4px;
 }
 
@@ -38,28 +35,25 @@
 }
 
 .featured__quest__card__text p {
-  font-family: "Alumni Sans", sans-serif;
   font-size: 20px;
   line-height: 20px;
   letter-spacing: 1%;
-  color: #2e3139;
+  color: var(--color-additional-grey-2);
 }
 
 .featured__quest__card__btn {
   width: 100%;
   padding: 8px 16px;
   border-radius: 40px;
-  background: #ff0633;
+  background-color: var(--color-accent);
   box-shadow:
     0px 4px 4px 0px #0000004d,
     0px 8px 12px 6px #00000026;
-  font-family: "Alumni Sans", sans-serif;
   font-weight: 600;
   font-size: 24px;
   line-height: 24px;
   letter-spacing: 1%;
   text-transform: uppercase;
-  color: #fdfdfd;
   border: none;
   cursor: pointer;
   transition: all 0.2s linear;

@@ -4,14 +4,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-family: var(--font-additional);
 }
 
 .header__logo {
-  font-family: "Kelly Slab", sans-serif;
   font-size: 44px;
   line-height: 44px;
   text-transform: uppercase;
-  color: #fdfdfd;
   position: relative;
 }
 
@@ -21,11 +20,9 @@
   top: 28%;
   left: 92%;
   transform: rotate(-90deg);
-  font-family: "Kelly Slab", sans-serif;
   font-size: 18px;
   line-height: 18px;
   text-transform: uppercase;
-  color: #fdfdfd;
 }
 
 .header__nav__list {
@@ -36,9 +33,7 @@
 .header__nav__list__item {
   list-style-type: none;
   padding: 14px 48px;
-  font-family: "Kelly Slab", sans-serif;
   font-size: 20px;
-  color: #fdfdfd;
   transition: all 0.2s linear;
   cursor: pointer;
   transition: all 0.2s linear;
@@ -50,13 +45,11 @@
 
 .header__nav__list__item.download {
   border-radius: 40px;
-  background: #ff0633;
+  background-color: var(--color-accent);
   box-shadow:
     0px 4px 4px 0px #0000004d,
     0px 8px 12px 6px #00000026;
-  font-family: "Kelly Slab", sans-serif;
   font-size: 20px;
-  color: #fdfdfd;
 }
 
 .header__nav__list__item.download:hover {
@@ -69,20 +62,18 @@
 
 .header__nav__list__item.account {
   border-radius: 40px;
-  border: 1px solid #fdfdfd;
+  border: 1px solid var(--color-main-contrast);
 }
 
 .header__nav__list__item.account:hover {
-  background: #fdfdfd;
-  color: #1e2025;
+  background-color: var(--color-main-contrast);
+  color: var(--color-fill);
 }
 
 .header__lang__change {
-  font-family: "Kelly Slab", sans-serif;
   font-size: 20px;
   line-height: 20px;
   font-weight: 400;
-  color: #fdfdfd;
   position: relative;
   transition: all 0.1s linear;
   cursor: pointer;
@@ -123,8 +114,6 @@
 
 .header__burger__btn {
   position: relative;
-  /* width: 16px;
-  height: 10px; */
   width: 24px;
   height: 24px;
   justify-content: center;
@@ -136,49 +125,7 @@
 
 .header__burger__btn__icon {
   width: 100%;
-  /* height: 100%; */
 }
-
-/* .header__burger__btn:hover {
-  transform: scale(1.05);
-}
-
-.header__burger__btn::before,
-.header__burger__btn::after {
-  content: "";
-  position: absolute;
-  left: 0;
-}
-
-.header__burger__btn__stick,
-.header__burger__btn::before,
-.header__burger__btn::after {
-  width: 100%;
-  height: 1px;
-  background: #fdfdfd;
-  transition: all 0.2s linear;
-}
-
-.header__burger__btn::before {
-  top: 0;
-}
-
-.header__burger__btn::after {
-  bottom: 0;
-}
-
-.header__burger__btn.active {
-  transform: rotate(45deg);
-}
-
-.header__burger__btn.active::before {
-  opacity: 0;
-}
-
-.header__burger__btn.active::after {
-  top: 44%;
-  transform: rotate(90deg);
-} */
 
 @media (max-width: 1088px) {
   .header__nav {

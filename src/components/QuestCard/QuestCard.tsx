@@ -5,7 +5,6 @@ import { type IQuest } from "../../constants/quests";
 export default function QuestCard(quest: IQuest) {
   const [isСompleted, setIsСompleted] = useState<boolean>(!quest.isAvailable);
   return (
-    // <div className={`quest__card ${isСompleted ? "completed" : ""}`}>
     <div className="quest__card">
       <div className={`quest__card__status ${isСompleted ? "completed" : ""}`}>
         {isСompleted ? "Выполнен" : "Доступен"}
